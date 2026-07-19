@@ -159,3 +159,48 @@ text-align:center;
 padding:30px;
 
 }
+.about{
+
+padding:100px 10%;
+
+background:white;
+
+}
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.about h2{
+
+font-size:48px;
+
+text-align:center;
+
+margin-bottom:35px;
+
+font-family:'Playfair Display',serif;
+
+color:#081B33;
+
+}
+
+.about p{
+
+font-size:22px;
+
+line-height:1.9;
+
+text-align:center;
+
+color:#444;
+
+max-width:900px;
+
+margin:auto;
+
+}
