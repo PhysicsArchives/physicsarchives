@@ -1,67 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Physics Archives</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description"
+content="Preserving the History, Discoveries & Legacy of Physics.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon"
+type="image/png"
+href="assets/images/logo.png">
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+/* ---------- RESET ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#030814;
+    color:#fff;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+.background{
+    z-index:-2;
+}
+
+#stars{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.background::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:-420px;
+
+transform:translateX(-50%);
+
+width:900px;
+height:900px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+rgba(75,125,255,.30),
+transparent 70%);
+
+filter:blur(90px);
+
+animation:nebula 16s ease-in-out infinite;
+
+}
+
+@keyframes nebula{
+
+0%,100%{
+
+transform:
+translateX(-50%)
+scale(1);
+
+}
+
+50%{
+
+transform:
+translateX(-50%)
+scale(1.18);
+
+}
+
+}
+
+#stars{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-2;
+
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-start;
+
+align-items:center;
+
+padding:60px 40px;
+
+}
+
+/* ---------- HERO CARD ---------- */
+
+header{
+
+width:min(920px,95%);
+
+text-align:center;
+
+padding:45px 40px;
+
+border-radius:30px;
+
+background:linear-gradient(
+180deg,
+rgba(18,28,60,.62),
+rgba(8,15,30,.52)
+);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.45);
+
+transition:.4s;
+
+animation:fadeHero 1s ease;
+
+}
+
+header:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 35px 100px rgba(70,120,255,.18);
+
+}
+
+@keyframes fadeHero{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+width:115px;
+
+display:block;
+
+margin:auto;
+
+filter:
+
+drop-shadow(0 0 12px rgba(120,170,255,.45))
+drop-shadow(0 0 28px rgba(60,120,255,.25));
+
+animation:floatLogo 6s ease-in-out infinite;
+
+}
+
+@keyframes floatLogo{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+/* ---------- BADGE ---------- */
+
+.badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+margin:28px auto;
+
+padding:12px 22px;
+
+border-radius:999px;
+
+background:
+
+rgba(255,255,255,.08);
+
+border:
+
+1px solid rgba(255,255,255,.12);
+
+font-size:.95rem;
+
+}
+
+.dot{
+
+width:10px;
+height:10px;
+
+border-radius:50%;
+
+background:#ffd54a;
+
+animation:pulse 1.6s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.5);
+
+opacity:.5;
+
+}
+
+}
+
+/* ---------- TITLE ---------- */
+
+h1{
+
+font-family:'Cinzel',serif;
+
+font-size:3.6rem;
+
+letter-spacing:4px;
+
+line-height:1.2;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#c7dcff,
+#ffffff
+);
+
+background-size:200% auto;
+
+-webkit-background-clip:text;
+background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:titleGlow 6s linear infinite;
+
+text-shadow:0 0 18px rgba(255,255,255,.08);
+
+}
+
+@keyframes titleGlow{
+
+to{
+
+background-position:200% center;
+
+}
+}
+
+.divider{
+
+width:180px;
+height:2px;
+
+margin:24px auto;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#7fb6ff,
+transparent);
+
+}
+
+.tagline{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+color:#dbe4f4;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+/* ---------- CONTENT ---------- */
+
+.hero{
+
+margin-top:45px;
+
+text-align:center;
+
+max-width:760px;
+
+}
+
+.hero h2{
+
+font-size:2rem;
+
+margin-bottom:18px;
+
+}
+
+.hero p{
+
+line-height:1.9;
+
+font-size:1.05rem;
+
+color:#d6ddeb;
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin:40px 0;
+
+}
+
+.btn{
+
+padding:15px 32px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px) scale(1.03);
+
+}
+
+.primary{
+
+background:white;
+
+color:#061225;
+
+box-shadow:0 10px 30px rgba(255,255,255,.15);
+
+}
+
+.primary:hover{
+
+box-shadow:
+0 18px 45px rgba(255,255,255,.28);
+
+}
+
+.secondary{
+
+border:1px solid rgba(120,170,255,.45);
+
+color:white;
+
+background:rgba(255,255,255,.03);
+
+}
+
+.secondary:hover{
+
+background:rgba(90,140,255,.15);
+
+box-shadow:
+0 12px 35px rgba(80,130,255,.22);
+
+}
+
+/* ---------- SOCIAL ---------- */
+
+.social a{
+
+color:#dce7ff;
+
+text-decoration:none;
+
+padding:10px 16px;
+
+border-radius:30px;
+
+transition:.3s;
+
+border:1px solid transparent;
+
+}
+
+.social a:hover{
+
+background:rgba(255,255,255,.06);
+
+border-color:rgba(120,170,255,.25);
+
+transform:translateY(-2px);
+
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+margin-top:45px;
+
+font-size:.92rem;
+
+color:#97a8c8;
+
+letter-spacing:.4px;
+
+text-align:center;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+body{
+
+overflow:auto;
+
+}
+
+.container{
+
+padding:25px;
+
+}
+
+header{
+
+padding:35px 22px;
+
+}
+
+.logo{
+
+width:90px;
+
+}
+
+h1{
+
+font-size:2.3rem;
+
+letter-spacing:2px;
+
+}
+
+.tagline{
+
+font-size:1rem;
+
+}
+
+.hero{
+
+margin-top:35px;
+
+}
+
+.hero h2{
+
+font-size:1.6rem;
+
+}
+
+.hero p{
+
+font-size:.98rem;
+
+line-height:1.8;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn{
+
+width:100%;
+
+max-width:320px;
+
+text-align:center;
+
+}
+
+.social{
+
+gap:12px;
+
+}
+
+}
+</style>
 
 </head>
 
 <body>
 
+<div class="background"></div>
+
+<canvas id="stars"></canvas>
+
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+
+<div class="container">
+
 <header>
 
-<nav class="navbar">
+<img
+src="assets/images/logo.png"
+class="logo"
+alt="Physics Archives Logo">
 
-<div class="logo">
-Physics Archives
+<div class="badge">
+
+<span class="dot"></span>
+
+Launching Soon
+
 </div>
 
-<ul>
+<h1>
 
-<li><a href="#">Home</a></li>
+PHYSICS ARCHIVES
 
-<li><a href="#">History</a></li>
+</h1>
 
-<li><a href="#">Physicists</a></li>
+<div class="divider"></div>
 
-<li><a href="#">Timeline</a></li>
-
-<li><a href="#">Articles</a></li>
-
-<li><a href="#">About</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="overlay">
-
-<h1>Physics Archives</h1>
-
-<p>
+<p class="tagline">
 
 Preserving the History, Discoveries & Legacy of Physics
 
 </p>
 
-<a href="#" class="button">
+</header>
 
-Explore the Archives
+<section class="hero">
+
+<h2>
+
+A New Home for the History of Physics
+
+</h2>
+
+<p>
+
+Physics Archives is building a trusted digital archive dedicated to preserving the history of physics through scientists, discoveries, original documents, experiments, ideas, and milestones that have shaped our understanding of the universe.
+
+</p>
+
+<div class="buttons">
+
+<a
+href="mailto:physicsarchives@outlook.com"
+class="btn primary">
+
+📧 Contact Us
+
+</a>
+
+<a
+href="https://x.com/PhysicsArchives"
+target="_blank"
+class="btn secondary">
+
+𝕏 Follow on X
+
+</a>
+
+</div>
+
+<div class="social">
+
+<a
+href="https://facebook.com/physicsarchives"
+target="_blank">
+
+Facebook
+
+</a>
+
+<a
+href="https://linkedin.com/company/physicsarchives"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+<a
+href="https://x.com/PhysicsArchives"
+target="_blank">
+
+X
+
+</a>
+
+<a
+href="https://youtube.com/@PhysicsArchives"
+target="_blank">
+
+YouTube
 
 </a>
 
@@ -69,29 +722,108 @@ Explore the Archives
 
 </section>
 
-<section class="about">
-
-<div class="container">
-
-<h2>About Physics Archives</h2>
-
-<p>
-
-Physics Archives is an independent educational initiative dedicated to preserving, documenting, and sharing the history of physics. Our mission is to create one of the world's most comprehensive digital archives of physicists, discoveries, historical documents, Nobel Prizes, experiments, and milestones that have shaped modern science.
-
-</p>
-
-</div>
-
-</section>
-
 <footer>
 
-<p>
 © 2026 Physics Archives. All Rights Reserved.
-</p>
 
 </footer>
 
-</body>
-</html>
+</div>
+
+<script>
+
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+
+let stars = [];
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+class Star {
+
+    constructor() {
+
+        this.reset();
+
+    }
+
+    reset() {
+
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+
+        this.radius = Math.random() * 2.5 + 1;
+
+        this.alpha = Math.random();
+
+        this.speed = Math.random() * 0.015 + 0.003;
+
+    }
+
+    draw() {
+
+        ctx.beginPath();
+
+        ctx.arc(
+            this.x,
+            this.y,
+            this.radius,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+`rgba(255,255,255,0.95)`;
+
+        ctx.fill();
+
+    }
+
+    update() {
+
+        this.alpha += this.speed;
+
+        if (this.alpha >= 1 || this.alpha <= 0.2) {
+
+            this.speed *= -1;
+
+        }
+
+    }
+
+}
+
+for (let i = 0; i < 220; i++) {
+
+    stars.push(new Star());
+
+}
+
+function animate() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    stars.forEach(star => {
+
+        star.update();
+
+        star.draw();
+
+    });
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();

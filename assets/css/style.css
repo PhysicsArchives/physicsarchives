@@ -1,0 +1,1150 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:#ffffff;
+
+color:#222;
+
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 80px;
+
+background:#081B33;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-family:'Playfair Display',serif;
+
+font-weight:bold;
+
+color:#ffffff;
+
+}
+
+.navbar ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+.navbar a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.navbar a:hover{
+
+color:#d4af37;
+
+}
+
+.hero{
+
+height:90vh;
+
+background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center center/cover;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.overlay{
+
+background:rgba(0,0,0,.60);
+
+padding:60px;
+
+text-align:center;
+
+color:white;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.overlay h1{
+
+font-size:72px;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:20px;
+
+}
+
+.overlay p{
+
+font-size:26px;
+
+margin-bottom:40px;
+
+max-width:800px;
+
+}
+
+.button{
+
+background:#C9A227;
+
+padding:18px 40px;
+
+border-radius:5px;
+
+text-decoration:none;
+
+color:black;
+
+font-weight:bold;
+
+}
+
+.button:hover{
+
+background:white;
+
+}
+
+footer{
+
+    background:#081B33;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    padding:30px;
+
+    margin-top:80px;
+
+}
+
+footer p{
+
+    margin:0;
+
+}
+.about{
+
+padding:100px 10%;
+
+background:white;
+
+}
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.about h2{
+
+font-size:48px;
+
+text-align:center;
+
+margin-bottom:35px;
+
+font-family:'Playfair Display',serif;
+
+color:#081B33;
+
+}
+
+.about p{
+
+font-size:22px;
+
+line-height:1.9;
+
+text-align:center;
+
+color:#444;
+
+max-width:900px;
+
+margin:auto;
+
+}
+/* ===========================
+   Featured Collections
+=========================== */
+
+.collections{
+
+padding:100px 10%;
+
+background:#f6f8fb;
+
+}
+
+.collections h2{
+
+text-align:center;
+
+font-size:48px;
+
+margin-bottom:20px;
+
+font-family:'Playfair Display',serif;
+
+color:#081B33;
+
+}
+
+.section-intro{
+
+max-width:850px;
+
+margin:0 auto 60px;
+
+text-align:center;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+.collection-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+}
+
+.collection-card{
+
+background:#ffffff;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.collection-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.collection-card h3{
+
+font-size:28px;
+
+margin-bottom:18px;
+
+color:#081B33;
+
+}
+
+.collection-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+/* ===========================
+   Great Physicists
+=========================== */
+
+.physicists{
+
+padding:100px 10%;
+
+background:#ffffff;
+
+}
+
+.physicists h2{
+
+text-align:center;
+
+font-size:48px;
+
+font-family:'Playfair Display',serif;
+
+color:#081B33;
+
+margin-bottom:20px;
+
+}
+
+.physicist-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.physicist-card{
+
+background:#f8f9fc;
+
+padding:40px 30px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.physicist-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.physicist-image{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.physicist-card h3{
+
+font-size:30px;
+
+color:#081B33;
+
+margin-bottom:18px;
+
+}
+
+.physicist-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+/* ===========================
+   Physics Timeline
+=========================== */
+
+.timeline{
+
+padding:100px 10%;
+
+background:#f5f7fb;
+
+}
+
+.timeline h2{
+
+text-align:center;
+
+font-size:48px;
+
+font-family:'Playfair Display',serif;
+
+color:#081B33;
+
+margin-bottom:20px;
+
+}
+
+.timeline-container{
+
+max-width:900px;
+
+margin:70px auto 0;
+
+border-left:4px solid #081B33;
+
+padding-left:35px;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+margin-bottom:55px;
+
+}
+
+.timeline-item::before{
+
+content:"";
+
+position:absolute;
+
+left:-46px;
+
+top:8px;
+
+width:18px;
+
+height:18px;
+
+background:#081B33;
+
+border-radius:50%;
+
+}
+
+.year{
+
+display:inline-block;
+
+background:#081B33;
+
+color:white;
+
+padding:6px 16px;
+
+border-radius:30px;
+
+font-weight:600;
+
+margin-bottom:15px;
+
+}
+
+.timeline-item h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+color:#081B33;
+
+}
+
+.timeline-item p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+/*==============================
+Original Papers
+==============================*/
+
+.papers{
+
+padding:110px 10%;
+
+background:white;
+
+}
+
+.paper-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.paper-card{
+
+background:#f7f8fb;
+
+padding:40px;
+
+border-radius:20px;
+
+transition:.35s;
+
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+}
+
+.paper-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.paper-year{
+
+display:inline-block;
+
+background:#081B33;
+
+color:white;
+
+padding:8px 18px;
+
+border-radius:25px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.paper-card h3{
+
+font-size:28px;
+
+color:#081B33;
+
+margin-bottom:18px;
+
+}
+
+.paper-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+margin-bottom:25px;
+
+}
+
+.paper-card a{
+
+text-decoration:none;
+
+font-weight:700;
+
+color:#081B33;
+
+}
+/*==============================
+Famous Experiments
+==============================*/
+
+.experiments{
+
+padding:110px 10%;
+
+background:#f5f7fb;
+
+}
+
+.experiment-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.experiment-card{
+
+background:white;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+text-align:center;
+
+}
+
+.experiment-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.experiment-icon{
+
+font-size:60px;
+
+margin-bottom:25px;
+
+}
+
+.experiment-card h3{
+
+font-size:30px;
+
+color:#081B33;
+
+margin-bottom:18px;
+
+}
+
+.experiment-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+margin-bottom:25px;
+
+}
+
+.experiment-card a{
+
+text-decoration:none;
+
+font-weight:700;
+
+color:#081B33;
+
+}
+/*=========================
+Nobel Archive
+==========================*/
+
+.nobel{
+
+padding:110px 10%;
+
+background:white;
+
+}
+
+.nobel-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.nobel-card{
+
+background:#f8f9fc;
+
+padding:45px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.nobel-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.medal{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+.nobel-card h3{
+
+font-size:32px;
+
+color:#081B33;
+
+margin-bottom:10px;
+
+}
+
+.nobel-card h4{
+
+font-size:22px;
+
+color:#c79b18;
+
+margin-bottom:20px;
+
+}
+
+.nobel-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+/* ==========================================
+   PHYSICISTS PAGE
+========================================== */
+
+.page-hero{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
+    padding:110px 20px;
+    text-align:center;
+}
+
+.page-tag{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:.9rem;
+    letter-spacing:.5px;
+}
+
+.page-hero h1{
+    font-size:3.2rem;
+    margin-bottom:20px;
+}
+
+.page-hero p{
+    max-width:760px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.search-section{
+    padding:80px 20px;
+    background:#f8fafc;
+    text-align:center;
+}
+
+.search-wrapper{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.search-box{
+    width:420px;
+    max-width:100%;
+    padding:16px 20px;
+    border:1px solid #d6d6d6;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+.search-btn{
+    padding:16px 28px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#1e40af;
+    color:#fff;
+    font-weight:600;
+}
+
+.categories{
+    padding:90px 20px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:45px;
+}
+
+.category-card{
+    background:#fff;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-6px);
+}
+
+.category-card h3{
+    margin-bottom:15px;
+}
+
+.featured-physicists{
+    padding:90px 20px;
+    background:#f8fafc;
+}
+
+.years{
+    color:#666;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.alphabet-section{
+    padding:90px 20px;
+    text-align:center;
+}
+
+.alphabet-grid{
+    display:grid;
+    grid-template-columns:repeat(13,1fr);
+    gap:12px;
+    margin-top:40px;
+}
+
+.alphabet-grid a{
+    text-decoration:none;
+    padding:14px;
+    background:#fff;
+    border-radius:10px;
+    font-weight:700;
+    color:#1e3a8a;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.alphabet-grid a:hover{
+    background:#1e3a8a;
+    color:#fff;
+}
+
+.quote-section{
+    padding:90px 20px;
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+}
+
+.quote-section blockquote{
+    font-size:2rem;
+    max-width:900px;
+    margin:0 auto 20px;
+    font-family:"Playfair Display",serif;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+
+.page-hero h1{
+    font-size:2.3rem;
+}
+
+.alphabet-grid{
+    grid-template-columns:repeat(6,1fr);
+}
+
+}
+/* ==========================================
+   HISTORY TIMELINE
+========================================== */
+
+.history-timeline{
+    padding:90px 20px;
+    background:#f8fafc;
+}
+
+.timeline-list{
+    max-width:900px;
+    margin:50px auto 0;
+    position:relative;
+    padding-left:40px;
+}
+
+.timeline-list::before{
+    content:"";
+    position:absolute;
+    left:22px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#1e3a8a;
+    border-radius:2px;
+}
+
+.timeline-item{
+    display:flex;
+    gap:30px;
+    margin-bottom:50px;
+    align-items:flex-start;
+    position:relative;
+}
+
+.timeline-year{
+    min-width:110px;
+    font-size:1.4rem;
+    font-weight:700;
+    color:#1e3a8a;
+    position:relative;
+}
+
+.timeline-year::before{
+    content:"";
+    position:absolute;
+    left:-31px;
+    top:12px;
+    width:16px;
+    height:16px;
+    background:#1e3a8a;
+    border-radius:50%;
+    border:4px solid #ffffff;
+    box-shadow:0 0 0 3px #1e3a8a;
+}
+
+.timeline-content{
+    background:#fff;
+    padding:24px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    flex:1;
+}
+
+.timeline-content h3{
+    margin-bottom:10px;
+}
+
+.timeline-content p{
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.timeline-item{
+    flex-direction:column;
+    gap:10px;
+}
+
+.timeline-year{
+    min-width:auto;
+}
+
+}
+.timeline-button{
+    display:inline-block;
+    margin-top:18px;
+    padding:10px 18px;
+    background:#1e3a8a;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:all .3s ease;
+}
+
+.timeline-button:hover{
+    background:#0f172a;
+    transform:translateY(-2px);
+}.timeline-tag{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1e3a8a;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:14px;
+    letter-spacing:.3px;
+}.timeline-meta{
+
+    margin:12px 0 18px;
+
+    color:#64748b;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}s
+/* ARTICLE PAGE */
+
+.article-section{
+
+padding:90px 0;
+
+}
+
+.article-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:50px;
+
+align-items:start;
+
+}
+
+.article-main h2{
+
+margin-top:40px;
+
+margin-bottom:15px;
+
+color:#0f172a;
+
+}
+
+.article-main p{
+
+font-size:1.1rem;
+
+line-height:1.9;
+
+color:#475569;
+
+}
+
+.article-sidebar{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.info-card{
+
+background:#ffffff;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.info-card h3{
+
+margin-bottom:18px;
+
+color:#1e3a8a;
+
+}
+
+.info-card p{
+
+margin-bottom:12px;
+
+line-height:1.7;
+
+}
+
+.info-card ul{
+
+padding-left:20px;
+
+}
+
+.info-card li{
+
+margin-bottom:10px;
+
+}
+.article-image{
+
+margin-bottom:35px;
+
+}
+
+.article-image img{
+
+width:100%;
+
+border-radius:18px;
+
+display:block;
+
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
